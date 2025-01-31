@@ -1,0 +1,100 @@
+{
+  "logo": {
+      "type": "auto",
+      "source": "arch_small",
+      "color": {
+        "1" : "white",
+        "2" : "white"
+      },
+      // "type" : "kitty-direct",
+      // "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | sort -R | head -1)",
+      "padding" : {
+	      "left": 3
+      },
+      // "height": 12,
+      // "width" : 30
+  },
+  "display": {
+      "separator": " > "
+  },
+  "modules": [
+      // {
+      //     "type": "custom",
+      //     "format": "┌───────────────System Information───────────────┐"
+      // },
+      {
+          "type": "os",
+          "key": "    os",
+	        "keyColor": "white",
+      },
+      // {
+      //     "type": "kernel",
+      //     "key": "   Kernel",
+      //     "keyColor": "white"
+      // },
+      // {
+      //     "type": "packages",
+      //     "key": "   Packages",
+      //     "keyColor": "white"
+      // },
+ 
+    //   {
+    //       "type": "command",
+    //       "key": "  󱦟 OS Age ",
+    //       "keyColor": "31",
+    //       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); days_with_addition=$((days_difference + 422)); echo $days_with_addition days"
+    //   },
+      {
+          "type": "wm",
+          "key": "    wm",
+          "keyColor": "white"
+      },
+      {
+          "type": "terminal",
+          "key": "    terminal",
+          "keyColor": "white"
+      },
+      /*{
+          "type": "custom",
+          "format": "└─────────────────────────────────────────────────┘"
+      },
+    //   "break",
+    //   {
+    //       "type": "title",
+    //       "key": "  "
+    //   },
+      {
+          "type": "custom",
+          "format": "┌─────────────────────────────────────────────────┐"
+      },*/
+      {
+          "type": "cpu",
+          "format": "{1}",
+          "key": "    cpu",
+          "keyColor": "white"
+      },
+    
+      {
+          "type": "gpu",
+          "format": "{2}",
+          "key": "    gpu",
+          "keyColor": "white"
+      },
+      {
+          "type": "memory",
+          "key": "    memory",
+        
+          "keyColor": "white",
+      },
+      {
+          "type": "display",
+          "key": "  🖵  display",
+          "keyColor": "white"
+      },
+      // {
+      //     "type": "custom",
+      //     "format": "└─────────────────────────────────────────────────┘"
+      // },
+      "break"
+  ]
+}

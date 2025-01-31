@@ -1,0 +1,94 @@
+{
+  "logo": {
+      "type" : "kitty-direct",
+      "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | sort -R | head -1)",
+      "padding" : {
+	      "left": 3
+      },
+      "height": 12,
+      "width" : 30
+  },
+  "display": {
+      "separator": " > "
+  },
+  "modules": [
+      {
+          "type": "custom",
+          "format": "┌───────────────System Information───────────────┐"
+
+      },
+      {
+          "type": "os",
+          "key": "   OS",
+	        "keyColor": "dim_white",
+      },
+      {
+          "type": "kernel",
+          "key": "   Kernel",
+          "keyColor": "dim_white"
+      },
+      {
+          "type": "packages",
+          "key": "   Packages",
+          "keyColor": "dim_white"
+      },
+ 
+    //   {
+    //       "type": "command",
+    //       "key": "  󱦟 OS Age ",
+    //       "keyColor": "31",
+    //       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); days_with_addition=$((days_difference + 422)); echo $days_with_addition days"
+    //   },
+      {
+          "type": "wm",
+          "key": "   WM",
+          "keyColor": "dim_white"
+      },
+      {
+          "type": "terminal",
+          "key": "   Terminal",
+          "keyColor": "dim_white"
+      },
+      /*{
+          "type": "custom",
+          "format": "└─────────────────────────────────────────────────┘"
+      },
+    //   "break",
+    //   {
+    //       "type": "title",
+    //       "key": "  "
+    //   },
+      {
+          "type": "custom",
+          "format": "┌─────────────────────────────────────────────────┐"
+      },*/
+      {
+          "type": "cpu",
+          "format": "{1}",
+          "key": "   CPU",
+          "keyColor": "dim_white"
+      },
+    
+      {
+          "type": "gpu",
+          "format": "{2}",
+          "key": "   GPU Driver",
+          "keyColor": "dim_white"
+      },
+      {
+          "type": "memory",
+          "key": "  ﬙ Memory",
+          "keyColor": "dim_white"
+      },
+      {
+          "type": "display",
+          "key": "  🖵 Display",
+          "keyColor": "dim_white"
+      },
+      {
+          "type": "custom",
+          "format": "└─────────────────────────────────────────────────┘"
+      },
+      "break"
+  ]
+}
