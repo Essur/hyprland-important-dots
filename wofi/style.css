@@ -1,37 +1,32 @@
+* {
+    font-family: "UbuntuMono Nerd Font", monospace;
+    font-size: 15px;
+}
+
 window {
-    opacity: 0.8;
-    background-color: #1f2335; /* Black background */
-    color: #c0caf5; /* White text */
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #c0caf5;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /*border: 1px solid #ffffff;*/
+    color: #ffffff;
 }
 
-entry {
-    background-color: #1f2335; /* Black background for the input field */
-    color: #c0caf5; /* White text */
-    border: 1px solid #c0caf5; /* Border for the input field */
-    /*margin: 5px 0;*/
+#entry {
     padding: 5px;
+    border-radius: 5px;
+    background: transparent;
 }
 
-entry:selected {
-    background-color: #545c7e; /* Highlighted entry background */
-    color: #c0caf5; /* Highlighted entry text */
+#entry:selected {
+    /*background: #ffffff;*/
+    border: 1px solid #ffffff;
+    color: #ffffff;
 }
 
-list {
-    background-color: #1f2335; /* Black background for the list */
-    color: #c0caf5; /* White text */
-}
-
-list > * {
+#input {
     padding: 5px;
-    margin: 2px 0;
-}
-
-list > entry:selected {
-    background-color: #545c7e; /* Highlighted selection background */
-    color: #c0caf5; /* Highlighted selection text */
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    background: rgba(0, 0, 0, 0.0);
+    color: #ffffff;
 }
 

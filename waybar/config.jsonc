@@ -4,7 +4,7 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 15, // Waybar height (to be removed for auto height)
     //"width": 1000, // Waybar width
-    "spacing": 8, // Gaps between modules (4px)
+    "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
@@ -16,12 +16,13 @@
         "clock"
     ],
     "modules-right": [
-        //"custom/media",
+        // "custom/media",
         //"custom/spacer",
-        "mpd",
+        "custom/spotify",
         "pulseaudio",
-        "cpu",
-        "memory",
+        // "custom/spacer",
+        // "cpu",
+        // "memory",
         //"temperature",
         "hyprland/language",
         "tray",
@@ -48,6 +49,16 @@
         },
         "format": "{icon}",
         "format-icons": {
+          // "1": "一",
+          // "2": "二",
+          // "3": "三",
+          // "4": "四",
+          // "5": "五",
+          // "6": "六",
+          // "7": "七",
+          // "8": "八",
+          // "9": "九",
+          // "10": "十",
             "1": "1",
             "2": "2",
             "3": "3",
@@ -57,11 +68,21 @@
             "7": "7",
             "8": "8",
             "9": "9",
-            "10": "10"
+            "10": "10" 
             // "urgent": "",
-            // "active": "",
+            // "active": "",
             // "default": ""
         },
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+        // "format": " {}",
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-click-right" : "kitty --class=music -e fum",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -102,7 +123,8 @@
     "tray": {
         "icon-size": 14,
         "spacing": 5,
-        "show-passive-items": true
+        "show-passive-items": true,
+        "icon-theme": "Papirus Light"
     },
     
     "cpu": {
